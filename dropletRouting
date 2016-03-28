@@ -88,6 +88,17 @@
             droplet4.position.x = 20;
             droplet4.position.y = 3;
             droplet4.position.z = -35;
+            //Creation of a droplet
+            //(name, height, diamTop, diamBottom, tessellation, [optional height subdivs], scene, updatable)
+            var droplet5 = BABYLON.Mesh.CreateCylinder("Droplet #5", 3, 10, 10, 64, 1, scene, false);
+            var materialDroplet4 = new BABYLON.StandardMaterial("texture5", scene);
+            materialDroplet4.diffuseColor = new BABYLON.Color3(0.8, 0.2, 0.8);
+            materialDroplet4.specularColor = new BABYLON.Color3(0.8, 0.2, 0.8);
+            materialDroplet4.alpha = 0.6;
+            droplet4.material = materialDroplet4;
+            droplet4.position.x = 18;
+            droplet4.position.y = 3;
+            droplet4.position.z = -20;
             //ground
             var ground = BABYLON.Mesh.CreateGround("ground", 100, 100, 2, scene);
             //background color
