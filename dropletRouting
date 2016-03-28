@@ -107,15 +107,21 @@
             //Create animation
             scene.registerBeforeRender(function () {
                 camera.alpha += 0.0005 * scene.getAnimationRatio();
+                //blue
                 if (i % 120 < 30) {
                     droplet1.position.x += 1;
+                    ++droplet5.position.x;
                 } else if (i % 120 < 60) {
                     droplet1.position.z += 1;
+                    ++droplet5.position.z;
                 } else if (i % 120 < 90) {
                     droplet1.position.x -= 1;
+                    --droplet5.position.x;
                 } else {
                     droplet1.position.z -= 1;
+                    --droplet5.position.z;
                 }
+                //red
                 if (i % 40 < 10) {
                     droplet2.position.z += 4;
                 } else if (i % 40 < 20) {
@@ -125,11 +131,13 @@
                 } else {
                     droplet2.position.x -= 1;
                 }
+                //yellow
                 if (i % 300 < 150) {
                     droplet3.position.x -= 0.4;
                 } else {
                     droplet3.position.x += 0.4;
                 }
+                //green
                 if (i % 8 < 4) {
                     droplet4.position.x -= 4;
                 } else {
